@@ -8,15 +8,18 @@ r.connect({
     port: 28015,
     db: databaseName
 }, function(err, conn) {
+
+
     if (err) throw err;
     connection = conn;
 
+    //deletes entries of people who are under 20 years old
     r.table('danny').
     filter(r.row('age').lt(20)).
     delete().
     run(connection, function(err, result) {
         if (err) throw err;
-        console.log(JSON.stringify(result, null, 2));
+        console.log('Deletion complete');
         connection.close();
     });
 

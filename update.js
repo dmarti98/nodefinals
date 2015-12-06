@@ -13,11 +13,11 @@ r.connect({
 
 
     r.table('danny').
-    filter(r.row("firstname").eq("Sarah")).
-    update({occupation: "CEO"}).
+    filter(r.row("userid").eq(3)).
+    update({occupation: "General Manager"}).
     run(connection, function(err, result) {
         if (err) throw err;
-        console.log(JSON.stringify(result, null, 2));
+        console.log("Update complete!");
         connection.close();
     });
 

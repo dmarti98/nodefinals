@@ -1,0 +1,11 @@
+*NOTE: rethinkdb does not work on windows*
+
+Setup Folder: Creates the table & table content used for the example
+createTable.js- Creates a table called 'danny', for the example
+createContent.js- Creates content for the new table
+
+Main Folder:
+printTable.js - prints entries from an existing table
+reset.js - resets the table to its original state
+update.js - updates an entry's occupation
+delete.js - deletes specific entries

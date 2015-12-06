@@ -1,7 +1,7 @@
 var r = require('rethinkdb');
 var databaseName = 'test';
 
-
+//Prints table
 var connection = null;
 r.connect({
     host: 'localhost', 
@@ -16,17 +16,18 @@ r.connect({
     if (err) throw err;
     cursorObject.toArray(function(err, result) {
         if (err) throw err;
-        console.log('\n-----------------------------------------');
-        console.log('First\tLast\tAge\tOccupation');
-        console.log('-----------------------------------------');
+        console.log('\n-------------------------------------------------');
+        console.log('UserID\tFirst\tLast\tAge\tOccupation');
+        console.log('-------------------------------------------------');
         for(i = 0; i < result.length; i++){
-            console.log(result[i]['firstname'] + '\t' +
+            console.log(result[i]['userid'] + '\t' +
+                result[i]['firstname'] + '\t' +
                 result[i]['lastname'] + '\t' +
                 result[i]['age'] + '\t' +
                 result[i]['occupation'] );
 
         }
-        console.log('-----------------------------------------\n');
+        console.log('-------------------------------------------------\n');
     });
 
     connection.close();

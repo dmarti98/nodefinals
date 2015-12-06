@@ -1,7 +1,7 @@
 var r = require('rethinkdb');
 var databaseName = 'test';
 
-
+//Creates table for the examples used
 var connection = null;
 r.connect({
 	host: 'localhost', 
@@ -15,7 +15,5 @@ r.connect({
         function(err, result){
             if(err) throw err;
             connection.close();
-        })
-
+    })
 });
-
