@@ -1,0 +1,22 @@
+{
+  "name": "rethinkdbtest",
+  "version": "1.0.0",
+  "description": "RethinkDB finals",
+  "main": "app.js",
+  "dependencies": {
+    "rethinkdb": "~2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "nodejs app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "rethinkdb"
+  ],
+  "author": "Daniel Martinez",
+  "license": "Unliscensed"
+}
